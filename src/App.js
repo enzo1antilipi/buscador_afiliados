@@ -75,7 +75,7 @@ function App() {
         <h2 className="letras">
           Si alguno de sus datos no coincide (apellido, nombre, o escuela), por
           favor, informe al mail secgremial@atech.org.ar con copia a
-          junta.electoral.atech.2023@gmail.com .Incluya también un número de
+          junta.electoral.atech.2023@gmail.com. Incluya también un número de
           telefono para contactarle y adjunte al correo copia del recibo de
           sueldos de Agosto 2023.
         </h2>
