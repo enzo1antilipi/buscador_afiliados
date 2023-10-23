@@ -12,6 +12,7 @@
   border: 2px solid rgb(198, 152, 100);
   padding: 20px;
   width: 400px;
+  border-radius: 10px;
 }
 .tabla {
   border-collapse: separate;

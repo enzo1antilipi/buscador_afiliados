@@ -1,5 +1,6 @@
-import logo from "./logo.svg";
-import padron from "./padron.json";
+// import logo from "./logo.svg";
+// import padron from "./padron.json";
+import PADRON_2023 from "./PADRON_2023.json";
 import { useEffect, useState } from "react";
 import "./App.css";
 
@@ -14,7 +15,9 @@ function App() {
       //   // event.preventDefault();
       const numero = parseInt(formulario.value);
       // console.log(numero);
-      var resultado = padron.data.find((item) => item.DOCUMENTO === numero); //find metodo de busqueda
+      var resultado = PADRON_2023.data.find(
+        (item) => item.DOCUMENTO === numero
+      ); //find metodo de busqueda
       // console.log(resultado);
       setResultado(resultado);
     });
@@ -51,6 +54,10 @@ function App() {
                 <th>Regional</th>
                 <td>{resultado["REGIONAL "]}</td>
               </tr>{" "}
+              <tr>
+                <th>Mesa</th>
+                <td>{resultado.MESA}</td>
+              </tr>{" "}
             </table>
             {/* <h1>Documento:{resultado.DOCUMENTO}</h1>
           <h1>{resultado["APELLIDO, NOMBRES"]}</h1>
@@ -66,9 +73,11 @@ function App() {
       )}
       <div className="cartel">
         <h2 className="letras">
-          En caso de no figurar en el padrón o si observa datos erróneos,
-          comunicarse por mail a secgremial@atech.org.ar , adjuntando el recibo
-          de haberes de Agosto de 2023.
+          Si alguno de sus datos no coincide (apellido, nombre, o escuela), por
+          favor, informe al mail secgremial@atech.org.ar con copia a
+          junta.electoral.atech.2023@gmail.com .Incluya también un número de
+          telefono para contactarle y adjunte al correo copia del recibo de
+          sueldos de Agosto 2023.
         </h2>
       </div>
     </div>
