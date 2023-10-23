@@ -48,3 +48,13 @@
   width: 60px;
   font-size: large;
 }
+@media (max-width: 768px) {
+  .cartel {
+    font-size: 14px; /* Cambia el tamaño de fuente para pantallas más pequeñas si es necesario */
+    /* max-width: 300px; Ajusta el ancho máximo para pantallas más pequeñas si es necesario */
+    width: 95%;
+  }
+  .letras {
+    margin: 5px;
+  }
+}
