@@ -1,6 +1,6 @@
 // import logo from "./logo.svg";
 // import padron from "./padron.json";
-import PADRON_2023 from "./PADRON_2023.json";
+import PADRON_Defenitivo from "./PADRON_Defenitivo.json";
 import { useEffect, useState } from "react";
 import "./App.css";
 
@@ -15,7 +15,7 @@ function App() {
       //   // event.preventDefault();
       const numero = parseInt(formulario.value);
       // console.log(numero);
-      var resultado = PADRON_2023.data.find(
+      var resultado = PADRON_Defenitivo.data.find(
         (item) => item.DOCUMENTO === numero
       ); //find metodo de busqueda
       // console.log(resultado);
@@ -51,12 +51,12 @@ function App() {
                 <td>{resultado.ESCUELA}</td>
               </tr>{" "}
               <tr>
-                <th>Regional</th>
-                <td>{resultado["REGIONAL "]}</td>
-              </tr>{" "}
-              <tr>
                 <th>Mesa</th>
                 <td>{resultado.MESA}</td>
+              </tr>{" "}
+              <tr>
+                <th>Regional</th>
+                <td>{resultado["REGIONAL"]}</td>
               </tr>{" "}
             </table>
             {/* <h1>Documento:{resultado.DOCUMENTO}</h1>
@@ -73,11 +73,9 @@ function App() {
       )}
       <div className="cartel">
         <h2 className="letras">
-          Si alguno de sus datos no coincide (apellido, nombre, o escuela), por
-          favor, informe al mail secgremial@atech.org.ar con copia a
-          junta.electoral.atech.2023@gmail.com. Incluya también un número de
-          telefono para contactarle y adjunte al correo copia del recibo de
-          sueldos de Agosto 2023.
+          El 28/10/23 finalizó el plazo para reclamos y/o pedidos de
+          rectificación de datos en el padrón electoral. Este es el padrón
+          definitivo para los comicios del 28/11/23.
         </h2>
       </div>
     </div>
