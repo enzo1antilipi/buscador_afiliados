@@ -45,8 +45,83 @@
   background-color: rgb(198, 152, 100);
   color: white;
   height: 30px;
-  width: 60px;
+  width: 80px;
   font-size: large;
+}
+.bloc-onglets {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 10px;
+}
+.tabs {
+  padding: 15px;
+  text-align: center;
+  width: 50%;
+  background: rgba(237, 237, 237, 0.998);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  color: black;
+}
+.tabs:not(:last-child) {
+  border-right: 1px solid rgba(0, 0, 0, 0.274);
+}
+
+.active-tabs {
+  background: rgb(246, 246, 246);
+  border-bottom: 1px solid transparent;
+}
+
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 55%;
+  transform: translateX(-55%);
+  width: calc(100% + 2px);
+  height: 5px;
+  background: rgb(88, 147, 241);
+}
+
+button {
+  border: none;
+}
+.contenu-onglets {
+  flex-grow: 1;
+  
+}
+.contenu {
+  background: rgb(255, 255, 255);
+  padding: 0px;
+  width: 60%;
+  height: 100%;
+  display: none;
+  
+  margin: auto;
+  margin-top: 80px;
+  border-color:  rgb(198, 152, 100);
+  border-radius: 10px;
+}
+.contenu h2 {
+  padding: 0px 0 5px 0px;
+}
+.contenu hr {
+  width: 100px;
+  height: 2px;
+  background: #989898;
+  margin-bottom: 5px;
+}
+.contenu p {
+  width: 100%;
+  height: 100%;
+}
+.active-contenu {
+  display: block;
 }
 @media (max-width: 768px) {
   .cartel {
