@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 // import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Selected from './Selected.';
+// import Selected from './Selected.';  renderizar este para el buscador
+import Desactived from './Desactived';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Selected />
+    <Desactived />
   </React.StrictMode>
 );
 
